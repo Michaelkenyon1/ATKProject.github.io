@@ -13,7 +13,7 @@
       --card-bg: #ffffff;
       --text-main: #111827;
       --text-muted: #4b5563;
-      --accent-warm: #d97706;
+      --accent-red: #d97706; /* Warm culinary accent */
       --border-color: #e5e7eb;
     }
 
@@ -82,6 +82,9 @@
       font-size: 1.35rem;
       font-weight: 700;
       margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     p {
@@ -119,7 +122,7 @@
     .stat-num {
       font-size: 1.75rem;
       font-weight: 800;
-      color: var(--accent-warm);
+      color: var(--accent-red);
     }
 
     .stat-desc {
@@ -128,7 +131,7 @@
       margin-top: 0.25rem;
     }
 
-    /* Clean Grids */
+    /* Clean Lists & Grids */
     .grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -175,15 +178,15 @@
       background: var(--bg-color);
       padding: 0.85rem 1rem;
       border-radius: 8px;
-      border-left: 4px solid var(--accent-warm);
+      border-left: 4px solid var(--accent-red);
     }
 
     .time-stamp {
       font-weight: 700;
       font-size: 0.85rem;
-      color: var(--accent-warm);
+      color: var(--accent-red);
       white-space: nowrap;
-      min-width: 85px;
+      min-width: 75px;
     }
 
     .time-text h4 {
@@ -285,10 +288,10 @@
     <section class="section-card">
       <h2>1. The Problem: Cooking is Becoming a Dying Skill</h2>
       <p>
-        For my generation, home cooking is rapidly becoming a lost art. Between delivery services, pre-packaged meal kits, and busy schedules, convenience has quietly replaced creativity. Many of us are entering adulthood without real kitchen confidence or the opportunity to fall in love with cooking from scratch.
+        For my generation, home cooking is rapidly becoming a lost art. Between DoorDash, pre-packaged meal kits, and busy schedules, convenience has quietly replaced creativity. Many of us are entering adulthood without real kitchen confidence or the chance to fall in love with cooking from scratch.
       </p>
       <p>
-        When we do look for inspiration, we go straight to TikTok and YouTube. On these platforms, viral hacks get views, but they often fail in real life. America's Test Kitchen holds the key with bulletproof cooking science that actually works. By bringing the authority of America's Test Kitchen into modern formats, we can make cooking an exciting and accessible part of daily life.
+        When we do look for inspiration, we go straight to TikTok and YouTube—where flashy viral hacks get views, but often fail in real life. ATK holds the key: bulletproof cooking science that actually works. By bringing ATK's authority into modern, fast-paced formats, we can make cooking an exciting, accessible part of daily life.
       </p>
 
       <!-- Key Data Points -->
@@ -299,7 +302,7 @@
         </div>
         <div class="stat-box">
           <div class="stat-num">81%</div>
-          <div class="stat-desc">Use TikTok or YouTube for recipe inspiration</div>
+          <div class="stat-desc">Use TikTok/YouTube for recipe inspiration</div>
         </div>
         <div class="stat-box">
           <div class="stat-num">28%</div>
@@ -310,36 +313,36 @@
 
     <!-- 2. Long-Form YouTube Strategy -->
     <section class="section-card">
-      <h2>2. Flagship YouTube Series: ATK MythBusters</h2>
-      <p>An eight to twelve minute high-energy series pairing two test cooks to react to, recreate, and scientifically test viral recipes live in the kitchen.</p>
+      <h2>2. Flagship YouTube Series: "ATK MythBusters"</h2>
+      <p>An 8–12 minute high-energy series pairing two ATK test cooks to react to, recreate, and scientifically test viral recipes live in the kitchen.</p>
 
       <div class="timeline">
         <div class="time-item">
-          <div class="time-stamp">0:00 to 1:30</div>
+          <div class="time-stamp">0:00 - 1:30</div>
           <div class="time-text">
-            <h4>The React and Setup</h4>
+            <h4>The React & Setup</h4>
             <p>Test cooks watch viral social media recipes and share their initial impressions and skepticism.</p>
           </div>
         </div>
         <div class="time-item">
-          <div class="time-stamp">1:30 to 5:00</div>
+          <div class="time-stamp">1:30 - 5:00</div>
           <div class="time-text">
             <h4>The Side-by-Side Test</h4>
-            <p>Recreating the viral recipe as instructed versus testing the refined and scientifically proven method from America's Test Kitchen.</p>
+            <p>Recreating the viral recipe as instructed vs. testing ATK’s refined, scientifically proven method.</p>
           </div>
         </div>
         <div class="time-item">
-          <div class="time-stamp">5:00 to 8:00</div>
+          <div class="time-stamp">5:00 - 8:00</div>
           <div class="time-text">
             <h4>Deep-Dive Science Breakdown</h4>
-            <p>Explaining why it works using thermal graphics, texture tests, and clear visual science.</p>
+            <p>Explaining <em>why</em> it works using thermal graphics, texture tests, and clear visual science.</p>
           </div>
         </div>
         <div class="time-item">
-          <div class="time-stamp">8:00 to 10:00</div>
+          <div class="time-stamp">8:00 - 10:00</div>
           <div class="time-text">
-            <h4>The Verdict and The ATK Fix</h4>
-            <p>Delivering a final rating of Busted or Confirmed, followed by releasing the ultimate beginner-friendly recipe.</p>
+            <h4>The Verdict & ATK Fix</h4>
+            <p>Final "Busted or Confirmed" rating and releasing the ultimate beginner-friendly recipe.</p>
           </div>
         </div>
       </div>
@@ -347,13 +350,13 @@
 
     <!-- 3. Short-Form TikTok Strategy -->
     <section class="section-card">
-      <h2>3. Short-Form Strategy: TikTok and Reels</h2>
+      <h2>3. Short-Form Strategy: TikTok & Reels</h2>
       <p>Fast, bite-sized short-form concepts solving real daily friction points for young cooks.</p>
 
       <div class="grid-2">
         <div class="mini-card">
           <h4>💵 $20 Grocery Challenge</h4>
-          <p>Cooking three full days of delicious, nutritious meals on a strict twenty dollar budget.</p>
+          <p>Cooking 3 full days of delicious, nutritious meals on a strict $20 budget.</p>
         </div>
         <div class="mini-card">
           <h4>🛠️ Amazon Gadget Testing</h4>
@@ -365,20 +368,20 @@
         </div>
         <div class="mini-card">
           <h4>🍷 Dinner Party on a Budget</h4>
-          <p>How to cook impressive group meals for friends for less than the cost of food delivery.</p>
+          <p>How to cook impressive group meals for friends for less than the cost of DoorDash.</p>
         </div>
       </div>
     </section>
 
     <!-- 4. Community & Newsletter Funnel -->
     <section class="section-card">
-      <h2>4. Audience Growth and Newsletter Funnel</h2>
+      <h2>4. Audience Growth & Newsletter Funnel</h2>
       <p>Converting casual viewers into long-term subscribers through engaging digital touchpoints.</p>
 
       <div class="grid-2">
         <div class="mini-card">
           <h4>📊 Audience Trend Voting</h4>
-          <p>Weekly social polls letting viewers choose which viral trends to test next.</p>
+          <p>Weekly social polls letting viewers choose which viral trends ATK tests next.</p>
         </div>
         <div class="mini-card">
           <h4>🎥 Live Q&A Troubleshooting</h4>
@@ -387,11 +390,11 @@
       </div>
 
       <div class="highlight-card">
-        <h4>📩 Free Newsletter: ATK Starter Kitchen</h4>
-        <p>A free weekly three-minute email newsletter offered through student and youth portals.</p>
+        <h4>📩 Free Newsletter: "ATK Starter Kitchen"</h4>
+        <p>A free weekly 3-minute email newsletter offered through student/youth portals.</p>
         <ul>
           <li><strong>5-Ingredient Meal Plans:</strong> Budget recipes mapped to simple shopping lists.</li>
-          <li><strong>Why This Works Science Snacks:</strong> Quick culinary tips that build lifetime skill.</li>
+          <li><strong>"Why This Works" Science Snacks:</strong> Quick culinary tips that build lifetime skill.</li>
           <li><strong>Free-to-Paid Pipeline:</strong> Nurtures trust today, converting users into paid digital subscribers over time.</li>
         </ul>
       </div>
@@ -408,7 +411,7 @@
         <div class="flow-arrow">&rarr;</div>
         <div class="flow-step">
           <strong>2. TikTok</strong>
-          <span>Short Hacks and Budgeting</span>
+          <span>Short Hacks & Budgeting</span>
         </div>
         <div class="flow-arrow">&rarr;</div>
         <div class="flow-step">
@@ -416,7 +419,7 @@
           <span>Starter Kitchen Science</span>
         </div>
         <div class="flow-arrow">&rarr;</div>
-        <div class="flow-step" style="border-color: var(--accent-warm);">
+        <div class="flow-step" style="border-color: var(--accent-red);">
           <strong>4. ATK Loyalty</strong>
           <span>Paid Subscriptions</span>
         </div>
