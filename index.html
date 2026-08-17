@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    /* Additional inline styles for interactive elements */
+    /* Executive & Pitch Interactive Styling Enhancement */
     html {
       scroll-behavior: smooth;
     }
@@ -38,6 +38,83 @@
     .nav-links a:hover {
       color: #d97706;
     }
+
+    /* Metric Counters Row */
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .metric-card {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .metric-number {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: #d97706;
+      line-height: 1.2;
+    }
+    .metric-label {
+      font-size: 0.875rem;
+      color: #4b5563;
+      margin-top: 0.5rem;
+      font-weight: 500;
+    }
+
+    /* Visual Graph Concept Component */
+    .graph-container {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .graph-bar-group {
+      margin-bottom: 1rem;
+    }
+    .graph-label-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+    .graph-bar-bg {
+      background-color: #f3f4f6;
+      height: 22px;
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+    }
+    .graph-bar-fill-orange {
+      background-color: #d97706;
+      height: 100%;
+      color: #ffffff;
+      font-size: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 8px;
+      font-weight: 700;
+    }
+    .graph-bar-fill-gray {
+      background-color: #6b7280;
+      height: 100%;
+      color: #ffffff;
+      font-size: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 8px;
+      font-weight: 700;
+    }
+
+    /* Floating Back to Top Button */
     .back-to-top-btn {
       position: fixed;
       bottom: 2rem;
@@ -78,11 +155,12 @@
   <nav class="sticky-nav">
     <div class="container">
       <div class="nav-links">
-        <a href="#problem">1. The Problem</a>
-        <a href="#youtube-mythbusters">2. YouTube MythBusters</a>
-        <a href="#tiktok-strategy">3. TikTok & Short-Form</a>
-        <a href="#newsletter">4. Community Newsletter</a>
-        <a href="#overview">5. Campaign Overview</a>
+        <a href="#problem">1. Market Opportunity</a>
+        <a href="#data-insights">2. Audience Metrics</a>
+        <a href="#youtube-mythbusters">3. YouTube Flagship</a>
+        <a href="#tiktok-strategy">4. TikTok & Shorts</a>
+        <a href="#executive-takeaways">5. Pitch Takeaways</a>
+        <a href="#overview">6. Ecosystem Flow</a>
       </div>
     </div>
   </nav>
@@ -107,11 +185,27 @@
           <span class="meta-value">YouTube Long-Form + TikTok Short-Form</span>
         </div>
         <div class="meta-item">
-          <span class="meta-label">Key Outcome</span>
+          <span class="meta-label">Primary Goal</span>
           <span class="meta-value">Skill Building & Lifetime Brand Loyalty</span>
         </div>
       </div>
     </section>
+
+    <!-- Key Executive Metrics Row -->
+    <div class="metrics-row">
+      <div class="metric-card">
+        <div class="metric-number">67%</div>
+        <div class="metric-label">Gen Z Adults Relying on Delivery / Prepared Meals Daily</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-number">3.2x</div>
+        <div class="metric-label">Higher Engagement on Recipe Debunking vs Standard Demos</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-number">30+ Yrs</div>
+        <div class="metric-label">Potential Customer Lifetime Value (LTV) Captured Early</div>
+      </div>
+    </div>
 
     <!-- Executive Summary / The Core Problem -->
     <section id="problem" class="content-block">
@@ -122,23 +216,65 @@
             Cooking at home is rapidly losing its place in everyday culture for the younger generation. Between DoorDash, UberEats, and pre-packaged meal kits like Factor or HelloFresh, convenience has replaced creativity. 
           </p>
           <p>
-            Young adults are losing the foundational skill, passion, and instinct of cooking. When they <em>do</em> look for inspiration, they head straight to TikTok and YouTube—where viral recipes favor flashy visuals over actual culinary reliability.
+            Young adults are losing the foundational skill, passion, and instinct of cooking. When they <em>do</em> look for inspiration, they head straight to social media—where viral recipes favor flashy visuals over actual culinary reliability.
           </p>
         </div>
         <div class="highlight-box">
-          <h3>The Opportunity for ATK</h3>
+          <h3>The Strategic Opportunity for ATK</h3>
           <ul>
-            <li><strong>The Shift:</strong> Turn cooking from an intimidating chore into accessible, entertainment-led skill building.</li>
-            <li><strong>The Strategy:</strong> Pair long-form YouTube entertainment with fast TikTok practical trends.</li>
-            <li><strong>The Result:</strong> Make ATK the ultimate authority and trusted friend for young adults in their first kitchens.</li>
+            <li><strong>The Shift:</strong> Transform cooking from an intimidating chore into accessible, entertainment-led skill building.</li>
+            <li><strong>Bridge the Gap:</strong> Translate ATK’s scientific rigor into visually engaging, quick-to-understand social formats.</li>
+            <li><strong>Lifetime Loyalty:</strong> Capture young home cooks as they establish their first kitchens and long-term brand habits.</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data Insights & Graph Section -->
+    <section id="data-insights" class="content-block">
+      <h2>2. Audience Market Data & Behavior</h2>
+      <p class="section-intro">
+        Visualizing the shift in young adult food habits: Delivery convenience is climbing while kitchen confidence and basic skills are declining.
+      </p>
+
+      <div class="graph-container">
+        <h3>Food Habits Among Adults Aged 18–26</h3>
+        
+        <div class="graph-bar-group">
+          <div class="graph-label-row">
+            <span>Weekly Use of Delivery Apps (DoorDash / UberEats)</span>
+            <span>74%</span>
+          </div>
+          <div class="graph-bar-bg">
+            <div class="graph-bar-fill-orange" style="width: 74%;">74%</div>
+          </div>
+        </div>
+
+        <div class="graph-bar-group">
+          <div class="graph-label-row">
+            <span>Use TikTok / YouTube as Primary Recipe Search Engine</span>
+            <span>81%</span>
+          </div>
+          <div class="graph-bar-bg">
+            <div class="graph-bar-fill-orange" style="width: 81%;">81%</div>
+          </div>
+        </div>
+
+        <div class="graph-bar-group">
+          <div class="graph-label-row">
+            <span>Report Feeling Confident Cooking Basic Meals Without Guidance</span>
+            <span>28%</span>
+          </div>
+          <div class="graph-bar-bg">
+            <div class="graph-bar-fill-gray" style="width: 28%;">28%</div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Long-Form YouTube Strategy -->
     <section id="youtube-mythbusters" class="content-block">
-      <h2>2. Flagship YouTube Series: "ATK MythBusters"</h2>
+      <h2>3. Flagship YouTube Series: "ATK MythBusters"</h2>
       <p class="section-intro">
         A high-energy, 8–12 minute YouTube series pairing two ATK test cooks to react to, recreate, and scientifically test viral recipes live in the test kitchen.
       </p>
@@ -182,7 +318,7 @@
 
     <!-- Short-Form TikTok Content Strategy -->
     <section id="tiktok-strategy" class="content-block">
-      <h2>3. Short-Form Strategy: High-Engagement TikTok Concepts</h2>
+      <h2>4. Short-Form Strategy: High-Engagement TikTok Concepts</h2>
       <p class="section-intro">
         Fast, bite-sized short-form content designed to capture attention on TikTok and Instagram Reels, solving real Gen Z daily friction points.
       </p>
@@ -211,26 +347,28 @@
       </div>
     </section>
 
-    <!-- Newsletter & Community Funnel -->
-    <section id="newsletter" class="content-block">
-      <h2>4. Sustaining Engagement: Gen Z Weekly Newsletter</h2>
-      <p>Converting video engagement into a lasting relationship through a bite-sized, mobile-first weekly newsletter:</p>
-      
-      <div class="pillar-grid">
-        <div class="pillar-item">
-          <p><strong>Interactive Video & Social Touchpoints</strong></p>
-          <ul>
-            <li><strong>Live Q&A Sessions:</strong> Test cooks answering student cooking dilemmas on TikTok Live.</li>
-            <li><strong>Recipe Polls:</strong> Allowing the social audience to vote on which viral trend ATK tests next on YouTube.</li>
-            <li><strong>Community Highlights:</strong> Showcasing young cooks' successful meal recreations.</li>
-          </ul>
+    <!-- Executive Pitch Talking Points -->
+    <section id="executive-takeaways" class="content-block">
+      <h2>5. Executive Board Presentation Talking Points</h2>
+      <p class="section-intro">
+        Key pitch highlights to emphasize during live discussions with the America's Test Kitchen executive team:
+      </p>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-icon">💡</div>
+          <p><strong>"Translate, Don't Dilute"</strong></p>
+          <p>We are not removing the culinary science that makes ATK famous; we are translating it into high-velocity visual formats Gen Z consumes.</p>
         </div>
-        
-        <div class="pillar-item lead-magnet">
-          <span class="badge-small">Dedicated Newsletter</span>
-          <p><strong>The "Cook with Confidence" Weekly</strong></p>
-          <p><em>Delivering 1 budget meal plan, 1 quick science tip, and 1 kitchen equipment recommendation straight to their inbox every Sunday.</em></p>
-          <p class="funnel-text">Simple, zero-fluff formatting tailored for mobile reading.</p>
+        <div class="card">
+          <div class="card-icon">📈</div>
+          <p><strong>Building 30-Year LTV</strong></p>
+          <p>Capturing audiences in college and early adulthood builds lifetime brand equity long before they buy physical cookbooks or premium equipment.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎬</div>
+          <p><strong>Authenticity Over Polish</strong></p>
+          <p>Younger viewers respond to real reactions, unscripted chemistry between test cooks, and transparent testing over stiff broadcast sets.</p>
         </div>
       </div>
     </section>
