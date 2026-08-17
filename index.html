@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ATK Growth Proposal | Reconnecting Gen Z to the Kitchen</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>America's Test Kitchen - Creative Strategy Pitch</title>
   <style>
+    /* Global Reset & Typography */
     :root {
-      --bg-color: #f9fafb;
+      --primary-color: #1a1a1a;
+      --accent-color: #d97706;
+      --accent-bg: #fef3c7;
+      --bg-gray: #f9fafb;
       --card-bg: #ffffff;
-      --text-main: #111827;
-      --text-muted: #4b5563;
-      --accent-warm: #d97706;
       --border-color: #e5e7eb;
+      --text-muted: #4b5563;
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
 
     * {
@@ -23,589 +23,430 @@
       padding: 0;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-main);
-      line-height: 1.6;
-      padding-bottom: 3rem;
+      font-family: var(--font-family);
+      color: var(--primary-color);
+      background-color: var(--bg-gray);
+      line-height: 1.5;
+      padding: 2rem 1rem;
     }
 
     .container {
-      max-width: 850px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 0 1.25rem;
     }
 
-    /* Header & Badges */
-    .site-header {
-      padding: 1.5rem 0 1rem 0;
-      border-bottom: 1px solid var(--border-color);
-      background: #ffffff;
+    /* Top Banner & Header */
+    header {
+      margin-bottom: 2rem;
     }
 
-    .header-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .team-brand {
-      font-size: 0.875rem;
-      font-weight: 700;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .badge {
+    .top-badge {
       display: inline-block;
-      background: #fef3c7;
-      color: #92400e;
+      background-color: var(--accent-bg);
+      color: var(--accent-color);
       font-size: 0.75rem;
       font-weight: 700;
-      padding: 0.25rem 0.75rem;
-      border-radius: 9999px;
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      margin-bottom: 0.5rem;
     }
 
-    /* Sticky Nav */
-    .sticky-nav {
-      position: sticky;
-      top: 0;
-      background: #ffffff;
-      border-bottom: 1px solid var(--border-color);
-      z-index: 1000;
-      padding: 0.75rem 0;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.25rem;
-      overflow-x: auto;
-      white-space: nowrap;
-      font-size: 0.85rem;
-      font-weight: 600;
-    }
-
-    .nav-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent-warm);
-    }
-
-    /* Hero Section */
-    .hero-section {
-      padding: 2.5rem 0 1.5rem 0;
-    }
-
-    .category-tag {
-      font-size: 0.85rem;
+    .category-label {
+      color: var(--accent-color);
+      font-size: 0.875rem;
       font-weight: 700;
-      color: var(--accent-warm);
       text-transform: uppercase;
       letter-spacing: 0.05em;
       margin-bottom: 0.5rem;
     }
 
-    .project-title {
+    h1 {
       font-size: 2.25rem;
       font-weight: 800;
-      line-height: 1.2;
+      line-height: 1.25;
       margin-bottom: 0.75rem;
-      color: var(--text-main);
     }
 
-    .project-subtitle {
-      font-size: 1.05rem;
+    .subtitle {
+      font-size: 1.125rem;
       color: var(--text-muted);
       margin-bottom: 1.5rem;
     }
 
-    .meta-grid {
+    /* Target Bar */
+    .target-bar {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
-      background: #ffffff;
+      background: var(--card-bg);
       border: 1px solid var(--border-color);
       border-radius: 8px;
       padding: 1rem 1.25rem;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
 
-    .meta-label {
-      display: block;
+    .target-bar-item h4 {
       font-size: 0.75rem;
       text-transform: uppercase;
       color: var(--text-muted);
-      font-weight: 700;
+      margin-bottom: 0.25rem;
     }
 
-    .meta-value {
-      font-size: 0.9rem;
+    .target-bar-item p {
+      font-size: 0.875rem;
       font-weight: 600;
-      color: var(--text-main);
     }
 
-    /* Cards & Containers */
+    /* Metrics Grid */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .metric-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.25rem;
+      text-align: center;
+    }
+
+    .metric-value {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--accent-color);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .metric-label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .metric-source {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* Content Blocks */
     .content-block {
       background: var(--card-bg);
       border: 1px solid var(--border-color);
       border-radius: 12px;
-      padding: 1.75rem;
-      margin-top: 1.5rem;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+      padding: 2rem;
+      margin-bottom: 2rem;
     }
 
-    h2 {
-      font-size: 1.35rem;
+    .content-block h2 {
+      font-size: 1.5rem;
       font-weight: 700;
-      margin-bottom: 0.75rem;
-    }
-
-    p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      margin-bottom: 1rem;
-    }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* Metrics Row */
-    .metrics-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.25rem;
-      margin-top: 1.5rem;
-    }
-
-    .metric-card {
-      background: #ffffff;
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 1.25rem;
-      text-align: center;
-    }
-
-    .metric-number {
-      font-size: 2.25rem;
-      font-weight: 800;
-      color: var(--accent-warm);
-      line-height: 1.1;
-    }
-
-    .metric-label {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-top: 0.5rem;
-      font-weight: 500;
-    }
-
-    .citation-tag {
-      display: block;
-      font-size: 0.75rem;
-      color: #9ca3af;
-      margin-top: 0.35rem;
-      font-style: italic;
-    }
-
-    /* Layout Grids */
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-
-    @media (max-width: 650px) {
-      .two-col {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .highlight-box {
-      background: var(--bg-color);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 1.25rem;
-    }
-
-    .highlight-box h3 {
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-    }
-
-    .highlight-box ul {
-      margin-left: 1.25rem;
-      font-size: 0.875rem;
-      color: var(--text-muted);
-    }
-
-    .highlight-box li {
       margin-bottom: 0.5rem;
     }
 
-    /* Graph Visual */
-    .graph-container {
-      background: var(--bg-color);
+    .content-block > p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    /* Side-by-Side Layout */
+    .split-layout {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 1.5rem;
+    }
+
+    .callout-box {
+      background: var(--bg-gray);
       border: 1px solid var(--border-color);
       border-radius: 8px;
       padding: 1.25rem;
-      margin-top: 1rem;
     }
 
-    .graph-container h3 {
+    .callout-box h3 {
       font-size: 1rem;
       font-weight: 700;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
     }
 
-    .graph-bar-group {
+    .callout-box ul {
+      list-style-type: disc;
+      padding-left: 1.25rem;
+    }
+
+    .callout-box li {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .callout-box li strong {
+      color: var(--primary-color);
+    }
+
+    /* Data Bar Charts */
+    .chart-item {
       margin-bottom: 1.25rem;
     }
 
-    .graph-bar-group:last-child {
-      margin-bottom: 0;
-    }
-
-    .graph-label-row {
+    .chart-label {
       display: flex;
       justify-content: space-between;
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 0.35rem;
-    }
-
-    .graph-bar-bg {
-      background-color: #e5e7eb;
-      height: 22px;
-      border-radius: 4px;
-      overflow: hidden;
-      display: flex;
-    }
-
-    .graph-bar-fill-orange {
-      background-color: var(--accent-warm);
-      height: 100%;
-      color: #ffffff;
-      font-size: 0.75rem;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      padding-right: 8px;
-      font-weight: 700;
-    }
-
-    .graph-bar-fill-gray {
-      background-color: #6b7280;
-      height: 100%;
-      color: #ffffff;
-      font-size: 0.75rem;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      padding-right: 8px;
-      font-weight: 700;
-    }
-
-    /* Script Timeline */
-    .script-timeline {
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-      margin-top: 1rem;
-    }
-
-    .timeline-step {
-      display: flex;
-      gap: 1rem;
-      background: var(--bg-color);
-      padding: 1rem;
-      border-radius: 8px;
-      border-left: 4px solid var(--accent-warm);
-    }
-
-    @media (max-width: 500px) {
-      .timeline-step {
-        flex-direction: column;
-        gap: 0.35rem;
-      }
-    }
-
-    .step-time {
-      font-weight: 700;
-      font-size: 0.85rem;
-      color: var(--accent-warm);
-      white-space: nowrap;
-      min-width: 90px;
-    }
-
-    .step-content p {
       font-size: 0.875rem;
+      font-weight: 600;
       margin-bottom: 0.25rem;
     }
 
-    .strategy-note {
-      display: inline-block;
-      font-size: 0.75rem;
-      color: var(--accent-warm);
-      font-weight: 600;
-      margin-top: 0.25rem;
+    .bar-container {
+      background: #e5e7eb;
+      border-radius: 4px;
+      height: 18px;
+      overflow: hidden;
     }
 
-    /* Cards Grid */
+    .bar-fill {
+      background: var(--accent-color);
+      height: 100%;
+      text-align: right;
+      padding-right: 0.5rem;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      line-height: 18px;
+    }
+
+    .bar-fill.neutral {
+      background: #4b5563;
+    }
+
+    /* Timeline Section */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 1.5rem;
+      padding: 1rem;
+      background: var(--bg-gray);
+      border-left: 4px solid var(--accent-color);
+      border-radius: 0 8px 8px 0;
+    }
+
+    .timeline-time {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--accent-color);
+    }
+
+    .timeline-content h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-content p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-content .tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent-color);
+    }
+
+    /* Card Grids */
     .card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1rem;
-      margin-top: 1rem;
+      margin-bottom: 1.5rem;
     }
 
     .card {
-      background: var(--bg-color);
+      background: var(--bg-gray);
       border: 1px solid var(--border-color);
       border-radius: 8px;
-      padding: 1rem;
-    }
-
-    .card-icon {
-      font-size: 1.25rem;
-      margin-bottom: 0.35rem;
+      padding: 1.25rem;
     }
 
     .card p {
-      font-size: 0.85rem;
-      margin: 0;
+      font-size: 0.875rem;
+      color: var(--text-muted);
     }
 
     .card p strong {
       display: block;
-      color: var(--text-main);
-      margin-bottom: 0.25rem;
-      font-size: 0.9rem;
-    }
-
-    /* Newsletter Feature Card */
-    .newsletter-card {
-      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
-      border: 1px solid #fcd34d;
-      border-radius: 8px;
-      padding: 1.25rem;
-      margin-top: 1.25rem;
-    }
-
-    .newsletter-card h3 {
-      color: #92400e;
-      font-size: 1.05rem;
-      font-weight: 700;
-    }
-
-    .newsletter-card p, .newsletter-card li {
-      color: #78350f;
-      font-size: 0.875rem;
-    }
-
-    .newsletter-card ul {
-      margin-left: 1.25rem;
-      margin-top: 0.5rem;
-    }
-
-    .newsletter-card li {
+      color: var(--primary-color);
+      font-size: 0.95rem;
       margin-bottom: 0.35rem;
     }
 
-    /* Flow / Funnel */
-    .funnel-flow {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 0.5rem;
-      margin-top: 1.25rem;
-      text-align: center;
+    /* Newsletter Special Card */
+    .newsletter-card {
+      background: var(--accent-bg);
+      border: 1px solid #fde68a;
+      border-radius: 8px;
+      padding: 1.5rem;
     }
 
-    @media (max-width: 650px) {
-      .funnel-flow {
-        flex-direction: column;
-      }
+    .newsletter-card h3 {
+      color: var(--primary-color);
+      font-size: 1.125rem;
+      font-weight: 700;
+    }
+
+    .newsletter-card p {
+      font-size: 0.875rem;
+      color: var(--primary-color);
+    }
+
+    .newsletter-card ul {
+      list-style-type: disc;
+      padding-left: 1.25rem;
+    }
+
+    .newsletter-card li {
+      font-size: 0.875rem;
+      color: var(--primary-color);
+      margin-bottom: 0.35rem;
+    }
+
+    /* Campaign Ecosystem Flow */
+    .funnel-flow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-top: 1rem;
     }
 
     .flow-step {
       flex: 1;
-      background: var(--bg-color);
+      background: var(--bg-gray);
       border: 1px solid var(--border-color);
       border-radius: 8px;
-      padding: 0.85rem 0.5rem;
-      width: 100%;
+      padding: 1rem;
+      text-align: center;
     }
 
-    .flow-step p {
-      font-size: 0.75rem;
-      margin: 0;
-    }
-
-    .flow-step p strong {
-      font-size: 0.85rem;
-      color: var(--text-main);
+    .flow-step.highlight-step {
+      border: 2px solid var(--accent-color);
+      background: #ffffff;
     }
 
     .flow-num {
       display: inline-block;
-      background: #e5e7eb;
-      color: var(--text-main);
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
       border-radius: 50%;
+      background: #e5e7eb;
       font-size: 0.75rem;
       font-weight: 700;
-      line-height: 20px;
+      line-height: 22px;
       margin-bottom: 0.35rem;
+    }
+
+    .flow-step p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .flow-step p strong {
+      display: block;
+      font-size: 0.875rem;
+      color: var(--primary-color);
     }
 
     .flow-arrow {
       color: var(--text-muted);
-      font-weight: 700;
+      font-weight: bold;
     }
 
-    .highlight-step {
-      border-color: var(--accent-warm);
-      background: #fffbeb;
-    }
-
-    /* Footer & Back to Top */
-    .site-footer {
+    /* Footer */
+    footer {
       text-align: center;
-      padding: 2.5rem 0 1rem 0;
+      font-size: 0.875rem;
       color: var(--text-muted);
-      font-size: 0.85rem;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-color);
     }
 
-    .back-to-top-btn {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      background-color: var(--text-main);
-      color: #ffffff;
-      border: none;
-      border-radius: 50%;
-      width: 3rem;
-      height: 3rem;
-      font-size: 1.25rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s, background-color 0.2s;
-      text-decoration: none;
-      z-index: 100;
-    }
-
-    .back-to-top-btn:hover {
-      background-color: var(--accent-warm);
-      transform: translateY(-2px);
+    footer a {
+      color: var(--text-muted);
+      text-decoration: underline;
     }
   </style>
 </head>
-<body id="top">
+<body>
 
-  <!-- Site Header -->
-  <header class="site-header">
-    <div class="container header-container">
-      <span class="team-brand">Creative Strategy Pitch</span>
-      <span class="badge">America's Test Kitchen Initiative</span>
-    </div>
-  </header>
+  <div class="container">
 
-  <!-- Interactive Sticky Navigation Bar -->
-  <nav class="sticky-nav">
-    <div class="container">
-      <div class="nav-links">
-        <a href="#problem">1. Market Problem</a>
-        <a href="#data-insights">2. Audience Metrics</a>
-        <a href="#youtube-mythbusters">3. YouTube Flagship</a>
-        <a href="#tiktok-strategy">4. TikTok & Shorts</a>
-        <a href="#community-engagement">5. Engagement & Newsletter</a>
-        <a href="#overview">6. Ecosystem Flow</a>
-      </div>
-    </div>
-  </nav>
+    <!-- Header Section -->
+    <header>
+      <div class="category-label">Audience Growth & Brand Strategy Proposal</div>
+      <h1>Saving a Dying Art: Reconnecting Gen Z to Cooking</h1>
+      <p class="subtitle">How America's Test Kitchen can bridge the gap between viral food trends, delivery fatigue, and real culinary confidence for young adults.</p>
 
-  <main class="container">
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <p class="category-tag">Audience Growth & Brand Strategy Proposal</p>
-      <h1 class="project-title">Saving a Dying Art: Reconnecting Gen Z to Cooking</h1>
-      <p class="project-subtitle">
-        How America’s Test Kitchen can bridge the gap between viral food trends, delivery fatigue, and real culinary confidence for young adults.
-      </p>
-
-      <div class="meta-grid">
-        <div class="meta-item">
-          <span class="meta-label">Target Audience</span>
-          <span class="meta-value">Gen Z & Young Adults (Ages 18–26)</span>
+      <div class="target-bar">
+        <div class="target-bar-item">
+          <h4>Target Audience</h4>
+          <p>Gen Z & Young Adults (Ages 18–26)</p>
         </div>
-        <div class="meta-item">
-          <span class="meta-label">Core Ecosystem</span>
-          <span class="meta-value">YouTube + TikTok + Email Newsletter</span>
+        <div class="target-bar-item">
+          <h4>Core Ecosystem</h4>
+          <p>YouTube + TikTok + Email Newsletter</p>
         </div>
-        <div class="meta-item">
-          <span class="meta-label">Primary Goal</span>
-          <span class="meta-value">Skill Building & Lifetime Brand Loyalty</span>
+        <div class="target-bar-item">
+          <h4>Primary Goal</h4>
+          <p>Skill Building & Lifetime Brand Loyalty</p>
         </div>
       </div>
-    </section>
+    </header>
 
-    <!-- Key Metrics Row with Citations -->
-    <div class="metrics-row">
+    <!-- Key Metrics Grid -->
+    <div class="metrics-grid">
       <div class="metric-card">
-        <div class="metric-number">67%</div>
+        <div class="metric-value">67%</div>
         <div class="metric-label">Order takeout or prepared meals weekly</div>
-        <span class="citation-tag">Source: McKinsey & Co. Consumer Food Habits Survey</span>
+        <div class="metric-source">Source: McKinsey & Co. Consumer Food Habits Survey</div>
       </div>
       <div class="metric-card">
-        <div class="metric-number">81%</div>
+        <div class="metric-value">81%</div>
         <div class="metric-label">Search TikTok or YouTube first for recipe ideas</div>
-        <span class="citation-tag">Source: YPulse Food & Beverage Report</span>
+        <div class="metric-source">Source: YPulse Food & Beverage Report</div>
       </div>
       <div class="metric-card">
-        <div class="metric-number">28%</div>
+        <div class="metric-value">28%</div>
         <div class="metric-label">Feel confident making a full meal without help</div>
-        <span class="citation-tag">Source: Pew Research Center Youth Skills Index</span>
+        <div class="metric-source">Source: Pew Research Center Youth Skills Index</div>
       </div>
     </div>
 
-    <!-- Section 1: The Human Problem -->
+    <!-- Section 1 -->
     <section id="problem" class="content-block">
       <h2>1. The Problem: Learning to Cook Has Changed</h2>
-      <div class="two-col">
+      <div class="split-layout">
         <div>
-          <p>   
-            Let’s be honest: my generation doesn’t hate cooking. We don't like wasting our time and money.
-          </p>
-            <p>
-              When you’re working, going to school, or on a budget, cooking can feel like a gamble. You buy the ingredients, spend your limited time in the kitchen, and there’s always a chance the meal won’t turn out as the video promised. When that happens, DoorDash starts to feel a lot easier. And we’re not short on recipes. TikTok and Instagram give us thousands every day. We see the viral ten-minute pasta or five-ingredient dinner that promises to save time and money. Then we make it and realize it’s bland, undercooked, or just doesn’t work. Now we’ve wasted the groceries and the time we were trying to save.
-          </p>
-          <p>
-            That’s the gap America’s Test Kitchen can fill. We don’t need more recipes competing to go viral. We need recipes we can trust and tools to understand why they work. ATK gives younger cooks a place where recipes are tested and proven by test cooks, while explaining the science behind them. When we know a recipe will work and understand why, cooking stops feeling like a risk and starts feeling like a skill we can build. That confidence can change how we think about cooking. Instead of seeing the kitchen as another chore, we can see it as something we’re capable of doing well. ATK already knows how to take the guesswork out of cooking. The opportunity is to give my generation a trusted place to learn, build confidence, and know the recipe will work.
-          </p>
-         
+          <p>Let's be honest: my generation doesn't hate cooking. We don't like wasting our time and money.</p>
+          <p>When you're working, going to school, or on a budget, cooking can feel like a gamble. You buy the ingredients, spend your limited time in the kitchen, and there's always a chance the meal won't turn out as the video promised. When that happens, DoorDash starts to feel a lot easier. And we're not short on recipes. TikTok and Instagram give us thousands every day. We see the viral ten-minute pasta or five-ingredient dinner that promises to save time and money. Then we make it and realize it's bland, undercooked, or just doesn't work. Now we've wasted the groceries and the time we were trying to save.</p>
+          <p>That's the gap America's Test Kitchen can fill. We don't need more recipes competing to go viral. We need recipes we can trust and tools to understand why they work. ATK gives younger cooks a place where recipes are tested and proven by test cooks, while explaining the science behind them. When we know a recipe will work and understand why, cooking stops feeling like a risk and starts feeling like a skill we can build. That confidence can change how we think about cooking. Instead of seeing the kitchen as another chore, we can see it as something we're capable of doing well. ATK already knows how to take the guesswork out of cooking. The opportunity is to give my generation a trusted place to learn, build confidence, and know the recipe will work.</p>
         </div>
-        <div class="highlight-box">
+
+        <div class="callout-box">
           <h3>The Strategic Opportunity for ATK</h3>
           <ul>
             <li><strong>Reignite Culinary Curiosity:</strong> Show young adults that cooking is an enjoyable, budget-friendly skill rather than a stressful chore.</li>
@@ -616,146 +457,127 @@
       </div>
     </section>
 
-    <!-- Section 2: Data Insights & Visual Graph -->
-    <section id="data-insights" class="content-block">
+    <!-- Section 2 -->
+    <section id="audience-data" class="content-block">
       <h2>2. Audience Market Data & Behavior</h2>
-      <p>
-        Visualizing the shift in young adult food habits: Delivery reliance and social media recipe searching are high, while kitchen confidence remains low.
-      </p>
+      <p>Visualizing the shift in young adult food habits: Delivery reliance and social media recipe searching are high, while kitchen confidence remains low.</p>
 
-      <div class="graph-container">
-        <h3>Food & Kitchen Habits Among Adults Aged 18–26</h3>
-
-        <div class="graph-bar-group">
-          <div class="graph-label-row">
-            <span>Weekly Reliance on Food Delivery Apps (DoorDash / Uber Eats)</span>
-            <span>67%</span>
-          </div>
-          <div class="graph-bar-bg">
-            <div class="graph-bar-fill-orange" style="width: 67%;">67%</div>
-          </div>
-          <span class="citation-tag">Source: McKinsey & Company Consumer Trends</span>
+      <div class="chart-item">
+        <div class="chart-label">
+          <span>Weekly Reliance on Food Delivery Apps (DoorDash / Uber Eats)</span>
+          <span>67%</span>
         </div>
-
-        <div class="graph-bar-group">
-          <div class="graph-label-row">
-            <span>Use Social Media (TikTok / YouTube) as Primary Cooking Guide</span>
-            <span>81%</span>
-          </div>
-          <div class="graph-bar-bg">
-            <div class="graph-bar-fill-orange" style="width: 81%;">81%</div>
-          </div>
-          <span class="citation-tag">Source: YPulse Digital Food Insights</span>
+        <div class="bar-container">
+          <div class="bar-fill" style="width: 67%;">67%</div>
         </div>
+        <div class="metric-source" style="margin-top: 0.25rem;">Source: McKinsey & Company Consumer Trends</div>
+      </div>
 
-        <div class="graph-bar-group">
-          <div class="graph-label-row">
-            <span>Report High Confidence in Basic Kitchen & Knife Skills</span>
-            <span>28%</span>
-          </div>
-          <div class="graph-bar-bg">
-            <div class="graph-bar-fill-gray" style="width: 28%;">28%</div>
-          </div>
-          <span class="citation-tag">Source: Pew Research Center Social Trends</span>
+      <div class="chart-item">
+        <div class="chart-label">
+          <span>Use Social Media (TikTok / YouTube) as Primary Cooking Guide</span>
+          <span>81%</span>
         </div>
+        <div class="bar-container">
+          <div class="bar-fill" style="width: 81%;">81%</div>
+        </div>
+        <div class="metric-source" style="margin-top: 0.25rem;">Source: YPulse Digital Food Insights</div>
+      </div>
+
+      <div class="chart-item">
+        <div class="chart-label">
+          <span>Report High Confidence in Basic Kitchen & Knife Skills</span>
+          <span>28%</span>
+        </div>
+        <div class="bar-container">
+          <div class="bar-fill neutral" style="width: 28%;">28%</div>
+        </div>
+        <div class="metric-source" style="margin-top: 0.25rem;">Source: Pew Research Center Social Trends</div>
       </div>
     </section>
 
-    <!-- Section 3: YouTube Strategy -->
-    <section id="youtube-mythbusters" class="content-block">
+    <!-- Section 3 -->
+    <section id="youtube-series" class="content-block">
       <h2>3. Flagship YouTube Series: "ATK Tested & True (MythBusters)"</h2>
-      <p>
-        An eight to twelve-minute series where two test cooks call out viral recipe trends, test them side-by-side live, and show us what actually works.
-      </p>
+      <p>An eight to twelve-minute series where two test cooks call out viral recipe trends, test them side-by-side live, and show us what actually works.</p>
 
-      <div class="script-timeline">
-        <div class="timeline-step">
-          <div class="step-time">0:00 to 1:30</div>
-          <div class="step-content">
-            <p><strong>The Reaction</strong></p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-time">0:00 to 1:30</div>
+          <div class="timeline-content">
+            <h3>The Reaction</h3>
             <p>Test cooks watch a trending viral recipe on screen and give an honest reaction to whether it looks legit or fake.</p>
-            <span class="strategy-note">Hook: Authentic personality and fast entertainment value.</span>
+            <span class="tag">Hook: Authentic personality and fast entertainment value.</span>
           </div>
         </div>
 
-        <div class="timeline-step">
-          <div class="step-time">1:30 to 5:00</div>
-          <div class="step-content">
-            <p><strong>The Side-by-Side Test</strong></p>
+        <div class="timeline-item">
+          <div class="timeline-time">1:30 to 5:00</div>
+          <div class="timeline-content">
+            <h3>The Side-by-Side Test</h3>
             <p>Making the viral recipe exactly as posted on social media directly next to the test kitchen version.</p>
           </div>
         </div>
 
-        <div class="timeline-step">
-          <div class="step-time">5:00 to 8:00</div>
-          <div class="step-content">
-            <p><strong>The Quick Science Breakdown</strong></p>
+        <div class="timeline-item">
+          <div class="timeline-time">5:00 to 8:00</div>
+          <div class="timeline-content">
+            <h3>The Quick Science Breakdown</h3>
             <p>Explaining why the viral hack failed or succeeded using quick visual breakdowns and simple science.</p>
-            <span class="strategy-note">Core Value: Teaching practical skills without sounding like a textbook.</span>
+            <span class="tag">Core Value: Teaching practical skills without sounding like a textbook.</span>
           </div>
         </div>
 
-        <div class="timeline-step">
-          <div class="step-time">8:00 to 10:00</div>
-          <div class="step-content">
-            <p><strong>The Better Recipe</strong></p>
+        <div class="timeline-item">
+          <div class="timeline-time">8:00 to 10:00</div>
+          <div class="timeline-content">
+            <h3>The Better Recipe</h3>
             <p>Giving a final verdict and sharing an easy recipe that is guaranteed to work for beginner cooks.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section 4: TikTok Strategy -->
-    <section id="tiktok-strategy" class="content-block">
+    <!-- Section 4 -->
+    <section id="short-form-strategy" class="content-block">
       <h2>4. Short-Form Strategy: TikTok and Reels</h2>
-      <p>
-        Quick, real videos that solve the exact daily problems young people face in small kitchens.
-      </p>
+      <p>Quick, real videos that solve the exact daily problems young people face in small kitchens.</p>
 
       <div class="card-grid">
         <div class="card">
-          <div class="card-icon"></div>
           <p><strong>The $20 Grocery Challenge</strong></p>
           <p>Showing how to stretch twenty dollars into three full days of good food without eating boring meals.</p>
         </div>
         <div class="card">
-          <div class="card-icon"></div>
-          <p><strong>Workout Nutrition Plans/strong></p>
-          <p>Being able to make and have personal nutrition plans for fitness tracking and easy food prep recipes. </p>
+          <p><strong>Cheap Gadget Testing</strong></p>
+          <p>Testing viral Amazon kitchen tools so young cooks do not waste money on useless junk.</p>
         </div>
         <div class="card">
-          <div class="card-icon"></div>
           <p><strong>Tiny Apartment Hacks</strong></p>
           <p>Making great food with basic equipment like toaster ovens, microwaves, and single pans.</p>
         </div>
         <div class="card">
-          <div class="card-icon"></div>
           <p><strong>Hosting Friends on a Budget</strong></p>
           <p>How to cook an impressive dinner for friends without spending DoorDash money.</p>
         </div>
       </div>
     </section>
 
-    <!-- Section 5: Engagement & Newsletter -->
-    <section id="community-engagement" class="content-block">
+    <!-- Section 5 -->
+    <section id="community-email" class="content-block">
       <h2>5. Community Connection and Email Funnel</h2>
-      <p>
-        Turning casual social media viewers into real brand fans through useful digital tools.
-      </p>
+      <p>Turning casual social media viewers into real brand fans through useful digital tools.</p>
 
       <div class="card-grid">
         <div class="card">
-          <div class="card-icon"></div>
           <p><strong>Trend Voting</strong></p>
           <p>Letting the audience vote on social media for which viral trend ATK should test next on YouTube.</p>
         </div>
         <div class="card">
-          <div class="card-icon"></div>
           <p><strong>Live Cooking Help</strong></p>
           <p>Live kitchen streams where test cooks answer real-time questions from young home cooks.</p>
         </div>
         <div class="card">
-          <div class="card-icon"></div>
           <p><strong>Community Spotlights</strong></p>
           <p>Showcasing young cooks who successfully recreated budget recipes in their own home kitchens.</p>
         </div>
@@ -763,13 +585,11 @@
 
       <!-- Free Newsletter Feature -->
       <div class="newsletter-card">
-        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
-          <span style="font-size: 1.5rem;">📩</span>
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+          <span style="font-size: 1.25rem;">📩</span>
           <h3>Free Newsletter: ATK Starter Kitchen</h3>
         </div>
-        <p>
-          A quick weekly email built specifically for students and young adults starting out on their own.
-        </p>
+        <p style="margin-bottom: 0.75rem;">A quick weekly email built specifically for students and young adults starting out on their own.</p>
         <ul>
           <li><strong>5-Ingredient Meal Plans:</strong> Simple recipes mapped out for easy grocery trips.</li>
           <li><strong>Why This Works Tips:</strong> One-sentence cooking rules that instantly make anyone a better cook.</li>
@@ -778,8 +598,8 @@
       </div>
     </section>
 
-    <!-- Section 6: Ecosystem Flow -->
-    <section id="overview" class="content-block" style="text-align: center;">
+    <!-- Section 6 -->
+    <section id="ecosystem-flow" class="content-block" style="text-align: center;">
       <h2>6. Campaign Ecosystem Flow</h2>
       <p style="margin-bottom: 1rem;">How all platforms work together to build long-term brand equity.</p>
 
@@ -810,20 +630,13 @@
       </div>
     </section>
 
-  </main>
-
-  <!-- Interactive Footer -->
-  <footer class="site-footer">
-    <div class="container text-center">
+    <!-- Footer -->
+    <footer>
       <p>&copy; 2026 Michael Kenyon</p>
-      <div style="margin-top: 0.75rem;">
-        <a href="#top" style="color: #9ca3af; text-decoration: underline; font-size: 0.875rem;">Back to Top of Pitch</a>
-      </div>
-    </div>
-  </footer>
+      <p style="margin-top: 0.25rem;"><a href="#top">Back to Top of Pitch</a></p>
+    </footer>
 
-  <!-- Floating Back to Top Button -->
-  <a href="#top" class="back-to-top-btn" title="Back to top">&uarr;</a>
+  </div>
 
 </body>
 </html>
