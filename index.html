@@ -4,67 +4,215 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ATK Growth Proposal | Reconnecting Gen Z to the Kitchen</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Google Fonts for typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    /* Executive & Pitch Interactive Styling Enhancement */
+    :root {
+      --bg-color: #f9fafb;
+      --card-bg: #ffffff;
+      --text-main: #111827;
+      --text-muted: #4b5563;
+      --accent-warm: #d97706;
+      --border-color: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     html {
       scroll-behavior: smooth;
     }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-bottom: 3rem;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* Header & Badges */
+    .site-header {
+      padding: 1.5rem 0 1rem 0;
+      border-bottom: 1px solid var(--border-color);
+      background: #ffffff;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .team-brand {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #fef3c7;
+      color: #92400e;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Sticky Nav */
     .sticky-nav {
       position: sticky;
       top: 0;
       background: #ffffff;
-      border-bottom: 1px solid #e5e7eb;
+      border-bottom: 1px solid var(--border-color);
       z-index: 1000;
       padding: 0.75rem 0;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
     }
+
     .nav-links {
       display: flex;
       gap: 1.25rem;
       overflow-x: auto;
       white-space: nowrap;
-      font-size: 0.875rem;
+      font-size: 0.85rem;
       font-weight: 600;
     }
+
     .nav-links a {
-      color: #4b5563;
+      color: var(--text-muted);
       text-decoration: none;
       transition: color 0.2s;
     }
+
     .nav-links a:hover {
-      color: #d97706;
+      color: var(--accent-warm);
     }
 
-    /* Metric Counters Row */
-    .metrics-row {
+    /* Hero Section */
+    .hero-section {
+      padding: 2.5rem 0 1.5rem 0;
+    }
+
+    .category-tag {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent-warm);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-title {
+      font-size: 2.25rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+      color: var(--text-main);
+    }
+
+    .project-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .meta-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      margin: 2rem 0;
+      gap: 1rem;
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
     }
+
+    .meta-label {
+      display: block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+
+    .meta-value {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    /* Cards & Containers */
+    .content-block {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.75rem;
+      margin-top: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Metrics Row */
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
     .metric-card {
-      background: #f9fafb;
-      border: 1px solid #e5e7eb;
+      background: #ffffff;
+      border: 1px solid var(--border-color);
       border-radius: 8px;
       padding: 1.25rem;
       text-align: center;
     }
+
     .metric-number {
       font-size: 2.25rem;
       font-weight: 800;
-      color: #d97706;
-      line-height: 1.2;
+      color: var(--accent-warm);
+      line-height: 1.1;
     }
+
     .metric-label {
-      font-size: 0.875rem;
-      color: #4b5563;
+      font-size: 0.85rem;
+      color: var(--text-muted);
       margin-top: 0.5rem;
       font-weight: 500;
     }
+
     .citation-tag {
       display: block;
       font-size: 0.75rem;
@@ -73,33 +221,84 @@
       font-style: italic;
     }
 
-    /* Visual Graph Concept Component */
-    .graph-container {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin: 1.5rem 0;
+    /* Layout Grids */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 1rem;
     }
+
+    @media (max-width: 650px) {
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .highlight-box {
+      background: var(--bg-color);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.25rem;
+    }
+
+    .highlight-box h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .highlight-box ul {
+      margin-left: 1.25rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .highlight-box li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Graph Visual */
+    .graph-container {
+      background: var(--bg-color);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    .graph-container h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
     .graph-bar-group {
       margin-bottom: 1.25rem;
     }
+
+    .graph-bar-group:last-child {
+      margin-bottom: 0;
+    }
+
     .graph-label-row {
       display: flex;
       justify-content: space-between;
-      font-size: 0.875rem;
+      font-size: 0.85rem;
       font-weight: 600;
       margin-bottom: 0.35rem;
     }
+
     .graph-bar-bg {
-      background-color: #f3f4f6;
+      background-color: #e5e7eb;
       height: 22px;
       border-radius: 4px;
       overflow: hidden;
       display: flex;
     }
+
     .graph-bar-fill-orange {
-      background-color: #d97706;
+      background-color: var(--accent-warm);
       height: 100%;
       color: #ffffff;
       font-size: 0.75rem;
@@ -109,6 +308,7 @@
       padding-right: 8px;
       font-weight: 700;
     }
+
     .graph-bar-fill-gray {
       background-color: #6b7280;
       height: 100%;
@@ -121,21 +321,183 @@
       font-weight: 700;
     }
 
-    /* Newsletter Card Feature Styling */
+    /* Script Timeline */
+    .script-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      margin-top: 1rem;
+    }
+
+    .timeline-step {
+      display: flex;
+      gap: 1rem;
+      background: var(--bg-color);
+      padding: 1rem;
+      border-radius: 8px;
+      border-left: 4px solid var(--accent-warm);
+    }
+
+    @media (max-width: 500px) {
+      .timeline-step {
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+    }
+
+    .step-time {
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--accent-warm);
+      white-space: nowrap;
+      min-width: 90px;
+    }
+
+    .step-content p {
+      font-size: 0.875rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .strategy-note {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--accent-warm);
+      font-weight: 600;
+      margin-top: 0.25rem;
+    }
+
+    /* Cards Grid */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .card {
+      background: var(--bg-color);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+
+    .card-icon {
+      font-size: 1.25rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .card p {
+      font-size: 0.85rem;
+      margin: 0;
+    }
+
+    .card p strong {
+      display: block;
+      color: var(--text-main);
+      margin-bottom: 0.25rem;
+      font-size: 0.9rem;
+    }
+
+    /* Newsletter Feature Card */
     .newsletter-card {
       background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
       border: 1px solid #fcd34d;
       border-radius: 8px;
-      padding: 1.5rem;
-      margin-top: 1.5rem;
+      padding: 1.25rem;
+      margin-top: 1.25rem;
     }
 
-    /* Floating Back to Top Button */
+    .newsletter-card h3 {
+      color: #92400e;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .newsletter-card p, .newsletter-card li {
+      color: #78350f;
+      font-size: 0.875rem;
+    }
+
+    .newsletter-card ul {
+      margin-left: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    .newsletter-card li {
+      margin-bottom: 0.35rem;
+    }
+
+    /* Flow / Funnel */
+    .funnel-flow {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1.25rem;
+      text-align: center;
+    }
+
+    @media (max-width: 650px) {
+      .funnel-flow {
+        flex-direction: column;
+      }
+    }
+
+    .flow-step {
+      flex: 1;
+      background: var(--bg-color);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 0.85rem 0.5rem;
+      width: 100%;
+    }
+
+    .flow-step p {
+      font-size: 0.75rem;
+      margin: 0;
+    }
+
+    .flow-step p strong {
+      font-size: 0.85rem;
+      color: var(--text-main);
+    }
+
+    .flow-num {
+      display: inline-block;
+      background: #e5e7eb;
+      color: var(--text-main);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      font-size: 0.75rem;
+      font-weight: 700;
+      line-height: 20px;
+      margin-bottom: 0.35rem;
+    }
+
+    .flow-arrow {
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+
+    .highlight-step {
+      border-color: var(--accent-warm);
+      background: #fffbeb;
+    }
+
+    /* Footer & Back to Top */
+    .site-footer {
+      text-align: center;
+      padding: 2.5rem 0 1rem 0;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
     .back-to-top-btn {
       position: fixed;
       bottom: 2rem;
       right: 2rem;
-      background-color: #111827;
+      background-color: var(--text-main);
       color: #ffffff;
       border: none;
       border-radius: 50%;
@@ -151,15 +513,16 @@
       text-decoration: none;
       z-index: 100;
     }
+
     .back-to-top-btn:hover {
-      background-color: #d97706;
+      background-color: var(--accent-warm);
       transform: translateY(-2px);
     }
   </style>
 </head>
 <body id="top">
 
-  <!-- Header / Navigation -->
+  <!-- Site Header -->
   <header class="site-header">
     <div class="container header-container">
       <span class="team-brand">Creative Strategy Pitch</span>
@@ -171,7 +534,7 @@
   <nav class="sticky-nav">
     <div class="container">
       <div class="nav-links">
-        <a href="#problem">1. Market Opportunity</a>
+        <a href="#problem">1. Market Problem</a>
         <a href="#data-insights">2. Audience Metrics</a>
         <a href="#youtube-mythbusters">3. YouTube Flagship</a>
         <a href="#tiktok-strategy">4. TikTok & Shorts</a>
@@ -181,19 +544,19 @@
     </div>
   </nav>
 
-  <main class="container page-content">
+  <main class="container">
 
     <!-- Hero Section -->
     <section class="hero-section">
       <p class="category-tag">Audience Growth & Brand Strategy Proposal</p>
-      <h1 class="project-title">Saving a Dying Art: Reconnecting Gen Z with the Science & Joy of Cooking</h1>
+      <h1 class="project-title">Saving a Dying Art: Reconnecting Gen Z to Cooking</h1>
       <p class="project-subtitle">
-        How America’s Test Kitchen can bridge the gap between viral food trends, food delivery fatigue, and real culinary confidence for the next generation.
+        How America’s Test Kitchen can bridge the gap between viral food trends, delivery fatigue, and real culinary confidence for young adults.
       </p>
-      
+
       <div class="meta-grid">
         <div class="meta-item">
-          <span class="meta-label">The Target</span>
+          <span class="meta-label">Target Audience</span>
           <span class="meta-value">Gen Z & Young Adults (Ages 18–26)</span>
         </div>
         <div class="meta-item">
@@ -207,58 +570,58 @@
       </div>
     </section>
 
-    <!-- Key Executive Metrics Row with Citations -->
+    <!-- Key Metrics Row with Citations -->
     <div class="metrics-row">
       <div class="metric-card">
         <div class="metric-number">67%</div>
-        <div class="metric-label">Gen Z Adults Relying on Delivery / Prepared Meals Weekly</div>
+        <div class="metric-label">Order takeout or prepared meals weekly</div>
         <span class="citation-tag">Source: McKinsey & Co. Consumer Food Habits Survey</span>
       </div>
       <div class="metric-card">
         <div class="metric-number">81%</div>
-        <div class="metric-label">Young Adults Using TikTok / YouTube as Primary Recipe Search</div>
+        <div class="metric-label">Search TikTok or YouTube first for recipe ideas</div>
         <span class="citation-tag">Source: YPulse Food & Beverage Report</span>
       </div>
       <div class="metric-card">
         <div class="metric-number">28%</div>
-        <div class="metric-label">Feel Confident Cooking Full Meals Without Step-by-Step Help</div>
+        <div class="metric-label">Feel confident making a full meal without help</div>
         <span class="citation-tag">Source: Pew Research Center Youth Skills Index</span>
       </div>
     </div>
 
-    <!-- Reverted & Refined Section 1: Authentic Voice -->
+    <!-- Section 1: The Human Problem -->
     <section id="problem" class="content-block">
-      <h2>1. The Problem: Cooking is Becoming a Dying Skill</h2>
+      <h2>1. The Problem: Most of Us Do Not Know How to Cook</h2>
       <div class="two-col">
         <div>
           <p>
-            For my generation, home cooking is rapidly becoming a lost art. Between DoorDash, pre-packaged meal kits, and busy schedules, convenience has quietly replaced creativity. Many of us are entering adulthood without real kitchen confidence or the chance to fall in love with food from scratch.
+            Let us be honest about my generation. Most of us are not choosing DoorDash or frozen meals because we hate cooking. We choose them because cooking feels like a trap. When you work long hours or go to school on a budget, buying groceries only to ruin a meal and end up with a sink full of dishes feels like a complete waste of time and money.
           </p>
           <p>
-            When we do look for inspiration, we go straight to TikTok and YouTube—where flashy viral hacks get views, but often fail in real life. America’s Test Kitchen already holds the key: trusted, bulletproof science that actually works. By bringing ATK's authority into modern, high-energy content formats, we can turn cooking from an intimidating task into an exciting, accessible part of our daily lives.
+            When we try to learn, we scroll TikTok or Instagram reels. We see viral ten-minute pasta hacks that look amazing on camera, but when we try them at home, they turn out bland or raw. We get frustrated and go right back to ordering takeout. This is where America's Test Kitchen comes in. My generation does not need another flashy video trend. We need recipes that actually work the first time so we stop wasting groceries and start building real confidence in our kitchens.
           </p>
         </div>
         <div class="highlight-box">
           <h3>The Strategic Opportunity for ATK</h3>
           <ul>
-            <li><strong>Reignite Culinary Curiosity:</strong> Show Gen Z that cooking isn't a chore, but an enjoyable, budget-friendly skill and creative outlet.</li>
-            <li><strong>Bridge Authority & Media:</strong> Package ATK’s scientific rigor into entertaining, short and long-form video formats built for where we spend our time.</li>
-            <li><strong>Build Lifetime Brand Loyalty:</strong> Connect with young home cooks right as they set up their first kitchens and build lifelong habits.</li>
+            <li><strong>Reignite Culinary Curiosity:</strong> Show young adults that cooking is an enjoyable, budget-friendly skill rather than a stressful chore.</li>
+            <li><strong>Bridge Authority and Media:</strong> Package ATK scientific test kitchen rigor into fast, engaging video formats built for modern platforms.</li>
+            <li><strong>Build Lifetime Brand Loyalty:</strong> Connect with home cooks right as they move into their first apartments and build adult routines.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Data Insights & Graph Section with Citations -->
+    <!-- Section 2: Data Insights & Visual Graph -->
     <section id="data-insights" class="content-block">
       <h2>2. Audience Market Data & Behavior</h2>
-      <p class="section-intro">
+      <p>
         Visualizing the shift in young adult food habits: Delivery reliance and social media recipe searching are high, while kitchen confidence remains low.
       </p>
 
       <div class="graph-container">
         <h3>Food & Kitchen Habits Among Adults Aged 18–26</h3>
-        
+
         <div class="graph-bar-group">
           <div class="graph-label-row">
             <span>Weekly Reliance on Food Delivery Apps (DoorDash / UberEats)</span>
@@ -294,159 +657,161 @@
       </div>
     </section>
 
-    <!-- Long-Form YouTube Strategy -->
+    <!-- Section 3: YouTube Strategy -->
     <section id="youtube-mythbusters" class="content-block">
       <h2>3. Flagship YouTube Series: "ATK MythBusters"</h2>
-      <p class="section-intro">
-        A high-energy, 8–12 minute YouTube series pairing two ATK test cooks to react to, recreate, and scientifically test viral recipes live in the test kitchen.
+      <p>
+        An eight to twelve minute series where two test cooks call out viral recipe trends, test them side-by-side live, and show us what actually works.
       </p>
 
       <div class="script-timeline">
         <div class="timeline-step">
-          <div class="step-time">0:00–1:30</div>
+          <div class="step-time">0:00 to 1:30</div>
           <div class="step-content">
-            <p><strong>The React & Setup</strong></p>
-            <p>Two ATK test cooks watch viral TikTok and Instagram recipes on-screen (e.g., <em>"The 15-Minute Air Fryer Steak"</em>) and break down their initial skepticism.</p>
-            <span class="strategy-note">Hook: Authentic personality and entertainment value.</span>
+            <p><strong>The Reaction</strong></p>
+            <p>Test cooks watch a trending viral recipe on screen and give an honest reaction on whether it looks legit or fake.</p>
+            <span class="strategy-note">Hook: Authentic personality and fast entertainment value.</span>
           </div>
         </div>
 
         <div class="timeline-step">
-          <div class="step-time">1:30–5:00</div>
+          <div class="step-time">1:30 to 5:00</div>
           <div class="step-content">
             <p><strong>The Side-by-Side Test</strong></p>
-            <p>The cooks recreate the viral recipe exactly as instructed while simultaneously testing ATK's refined, scientifically proven technique side-by-side.</p>
+            <p>Making the viral recipe exactly as posted on social media directly next to the test kitchen version.</p>
           </div>
         </div>
 
         <div class="timeline-step">
-          <div class="step-time">5:00–8:00</div>
+          <div class="step-time">5:00 to 8:00</div>
           <div class="step-content">
-            <p><strong>The Deep-Dive Science Breakdown</strong></p>
-            <p>Leveraging YouTube’s longer format to explain <em>why</em> something works—using animated graphics, heat mapping, or texture tests to demonstrate moisture retention and thermal conductivity.</p>
-            <span class="strategy-note">Core Value: Blending entertainment with deep educational science.</span>
+            <p><strong>The Quick Science Breakdown</strong></p>
+            <p>Explaining why the viral hack failed or succeeded using quick visual breakdowns and simple science.</p>
+            <span class="strategy-note">Core Value: Teaching practical skills without sounding like a textbook.</span>
           </div>
         </div>
 
         <div class="timeline-step">
-          <div class="step-time">8:00–10:00</div>
+          <div class="step-time">8:00 to 10:00</div>
           <div class="step-content">
-            <p><strong>The Verdict & The ATK Fix</strong></p>
-            <p>Final "Busted or Confirmed" rating, followed by the test cooks sharing the ultimate beginner-friendly recipe that actually yields perfect results every time.</p>
+            <p><strong>The Better Recipe</strong></p>
+            <p>Giving a final verdict and sharing an easy recipe that guaranteed works for beginner cooks.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Short-Form TikTok Content Strategy -->
+    <!-- Section 4: TikTok Strategy -->
     <section id="tiktok-strategy" class="content-block">
-      <h2>4. Short-Form Strategy: High-Engagement TikTok Concepts</h2>
-      <p class="section-intro">
-        Fast, bite-sized short-form content designed to capture attention on TikTok and Instagram Reels, solving real Gen Z daily friction points.
+      <h2>4. Short-Form Strategy: TikTok and Reels</h2>
+      <p>
+        Quick, real videos that solve the exact daily problems young people face in small kitchens.
       </p>
 
       <div class="card-grid">
         <div class="card">
           <div class="card-icon">💵</div>
-          <p><strong>"$20 Grocery Challenge"</strong></p>
-          <p>Test cooks create 3 full days of nutritious, delicious meals on a strict $20 grocery budget, showing how to stretch ingredients.</p>
+          <p><strong>The $20 Grocery Challenge</strong></p>
+          <p>Showing how to stretch twenty dollars into three full days of good food without eating boring meals.</p>
         </div>
         <div class="card">
           <div class="card-icon">🛠️</div>
-          <p><strong>"Amazon Kitchen Gadget Testing"</strong></p>
-          <p>Putting viral TikTok Shop and Amazon gadgets to the test against basic kitchen tools to save young cooks money.</p>
+          <p><strong>Cheap Gadget Testing</strong></p>
+          <p>Testing viral Amazon kitchen tools so young cooks do not waste money on useless junk.</p>
         </div>
         <div class="card">
           <div class="card-icon">🏢</div>
-          <p><strong>"Small Kitchen Hacks"</strong></p>
-          <p>Solving tiny apartment constraints—microwave techniques, toaster oven hacks, and cooking complete meals with one pan.</p>
+          <p><strong>Tiny Apartment Hacks</strong></p>
+          <p>Making great food with basic equipment like toaster ovens, microwaves, and single pans.</p>
         </div>
         <div class="card">
           <div class="card-icon">🍷</div>
-          <p><strong>"Dinner Party on a Budget"</strong></p>
-          <p>Showing young adults how to cook impressive, restaurant-quality group meals for friends for less than the cost of DoorDash.</p>
+          <p><strong>Hosting Friends on a Budget</strong></p>
+          <p>How to cook an impressive dinner for friends without spending DoorDash money.</p>
         </div>
       </div>
     </section>
 
-    <!-- Community Engagement & Subscription/Newsletter Feature -->
+    <!-- Section 5: Engagement & Newsletter -->
     <section id="community-engagement" class="content-block">
-      <h2>5. Community Engagement & Student Subscription Funnel</h2>
-      <p class="section-intro">
-        Converting casual social viewers into active, long-term brand subscribers through targeted digital products:
+      <h2>5. Community Connection and Email Funnel</h2>
+      <p>
+        Turning casual social media viewers into real brand fans through useful digital tools.
       </p>
 
       <div class="card-grid">
         <div class="card">
           <div class="card-icon">📊</div>
-          <p><strong>Audience Trend Voting</strong></p>
-          <p>Interactive weekly polls on TikTok and Instagram allowing viewers to vote on which viral recipe ATK tests next on YouTube.</p>
+          <p><strong>Trend Voting</strong></p>
+          <p>Letting the audience vote on social media for which viral trend ATK should test next on YouTube.</p>
         </div>
         <div class="card">
           <div class="card-icon">🎥</div>
-          <p><strong>TikTok Live Q&A Sessions</strong></p>
-          <p>Live kitchen troubleshooting streams where test cooks answer real-time student and apartment cooking questions.</p>
+          <p><strong>Live Cooking Help</strong></p>
+          <p>Live kitchen streams where test cooks answer real time questions from young home cooks.</p>
         </div>
         <div class="card">
           <div class="card-icon">🌟</div>
-          <p><strong>Community Cook Spotlights</strong></p>
-          <p>Featured social shoutouts showcasing young home cooks who successfully recreated ATK budget recipes in their own kitchens.</p>
+          <p><strong>Community Spotlights</strong></p>
+          <p>Showcasing young cooks who successfully recreated budget recipes in their own home kitchens.</p>
         </div>
       </div>
 
-      <!-- Free Newsletter Lead Magnet Feature -->
+      <!-- Free Newsletter Feature -->
       <div class="newsletter-card">
         <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
           <span style="font-size: 1.5rem;">📩</span>
-          <h3 style="margin: 0; color: #92400e;">The "ATK Campus & Starter Kitchen" Digital Newsletter</h3>
+          <h3>Free Newsletter: ATK Starter Kitchen</h3>
         </div>
-        <p style="color: #78350f; font-size: 0.95rem; margin-bottom: 0.75rem;">
-          <strong>The Conversion Hook:</strong> A free weekly 3-minute email newsletter offered via a student/youth discount portal.
+        <p>
+          A quick weekly email built specifically for students and young adults starting out on their own.
         </p>
-        <ul style="color: #78350f; font-size: 0.875rem; margin-left: 1.25rem;">
-          <li><strong>5-Ingredient Meal Plans:</strong> Budget-conscious recipes mapped directly to single-person or college dorm shopping lists.</li>
-          <li><strong>"Why This Works" Science Snack:</strong> A 1-sentence cooking science rule that instantly improves kitchen skills.</li>
-          <li><strong>Free-to-Paid Pipeline:</strong> Nurtures young cooks with high-value free content today, seamlessly transitioning them into paid ATK Digital All-Access subscribers as their incomes grow.</li>
+        <ul>
+          <li><strong>5-Ingredient Meal Plans:</strong> Simple recipes mapped out for easy grocery trips.</li>
+          <li><strong>Why This Works Tips:</strong> One sentence cooking rules that instantly make anyone a better cook.</li>
+          <li><strong>Long-Term Value:</strong> Building trust early so young cooks stay with the brand as they grow.</li>
         </ul>
       </div>
     </section>
 
-    <!-- Campaign Ecosystem Overview -->
-    <section id="overview" class="content-block text-center">
-      <h2>Campaign Ecosystem Overview</h2>
+    <!-- Section 6: Ecosystem Flow -->
+    <section id="overview" class="content-block" style="text-align: center;">
+      <h2>6. Campaign Ecosystem Flow</h2>
+      <p style="margin-bottom: 1rem;">How all platforms work together to build long-term brand equity.</p>
+
       <div class="funnel-flow">
         <div class="flow-step">
           <span class="flow-num">1</span>
-          <p><strong>YouTube Series</strong></p>
-          <p>MythBusters Science & Reactions</p>
+          <p><strong>YouTube</strong></p>
+          <p>MythBusters Series</p>
         </div>
         <div class="flow-arrow">&rarr;</div>
         <div class="flow-step">
           <span class="flow-num">2</span>
-          <p><strong>TikTok Shorts</strong></p>
-          <p>$20 Meals & Gadget Testing</p>
+          <p><strong>TikTok</strong></p>
+          <p>Budget & Hack Shorts</p>
         </div>
         <div class="flow-arrow">&rarr;</div>
         <div class="flow-step">
           <span class="flow-num">3</span>
-          <p><strong>Weekly Newsletter</strong></p>
-          <p>Starter Kitchen Science Wins</p>
+          <p><strong>Newsletter</strong></p>
+          <p>Starter Kitchen Tips</p>
         </div>
         <div class="flow-arrow">&rarr;</div>
         <div class="flow-step highlight-step">
           <span class="flow-num">4</span>
           <p><strong>ATK Loyalty</strong></p>
-          <p>Paid Subscriptions & Lifetime Trust</p>
+          <p>Paid Subscriptions</p>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- Interactive Footer Navigation -->
+  <!-- Interactive Footer -->
   <footer class="site-footer">
     <div class="container text-center">
-      <p>&copy; Campaign Strategy Pitch — Reconnecting Gen Z to America’s Test Kitchen</p>
+      <p>&copy; 2026 Michael Kenyon | America's Test Kitchen Strategy Proposal</p>
       <div style="margin-top: 0.75rem;">
         <a href="#top" style="color: #9ca3af; text-decoration: underline; font-size: 0.875rem;">Back to Top of Pitch</a>
       </div>
